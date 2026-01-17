@@ -1,11 +1,6 @@
 <?php
 include 'db.php';
 
-/**
- * EXPLAINING SELECT WITH MySQLi:
- * We use mysqli_query to get all records from the table.
- * mysqli_fetch_all returns the data as an associative array.
- */
 $sql = "SELECT * FROM books";
 $result = mysqli_query($conn, $sql);
 $books = mysqli_fetch_all($result, MYSQLI_ASSOC);
